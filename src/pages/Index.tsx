@@ -9,11 +9,11 @@ import Footer from "@/components/Footer";
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "FoodEstablishment",
-  name: "La Posta Catering",
+  name: "La Posta Eventos",
   description:
-    "Catering en CABA: asado a domicilio, sándwiches de milanesa para eventos y empanadas caseras. Servicio premium para fiestas y eventos en Buenos Aires.",
+    "Catering en CABA: sanguches de milanesa, hamburguesas, choripán, bondiola y empanadas tucumanas para eventos en Buenos Aires.",
   url: "https://laposta.com.ar",
-  telephone: "+54-11-0000-0000",
+  telephone: "+54-11-2163-9741",
   email: "hola@laposta.com.ar",
   servesCuisine: "Argentine",
   priceRange: "$$",
@@ -36,8 +36,7 @@ const jsonLd = {
 
 const Index = () => {
   useEffect(() => {
-    // Set page title and meta
-    document.title = "La Posta | El Mejor Catering de Asado y Milanesas en CABA";
+    document.title = "La Posta Eventos | Catering de Milanesas y Parrilla en CABA";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
       metaDesc.setAttribute("content", "Catering en CABA: asado a domicilio, sándwiches de milanesa para eventos y empanadas caseras. Pedí tu presupuesto hoy.");

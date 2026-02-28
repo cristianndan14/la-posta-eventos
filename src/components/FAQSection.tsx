@@ -7,24 +7,24 @@ import {
 
 const faqs = [
   {
-    q: "¿En qué zonas de CABA hacen delivery de catering?",
-    a: "Cubrimos los 48 barrios de la Ciudad Autónoma de Buenos Aires. Desde Palermo hasta La Boca, de Belgrano a Barracas. También llegamos a zona norte y oeste de GBA con un pequeño adicional de logística.",
+    q: "¿En qué zonas de CABA hacen delivery?",
+    a: "Cubrimos los 48 barrios de CABA. Desde Palermo hasta La Boca, de Belgrano a Barracas. También llegamos a zona norte y oeste de GBA con un pequeño adicional de logística.",
   },
   {
     q: "¿Cuánto tiempo antes debo hacer el pedido?",
-    a: "Recomendamos reservar con al menos 72 horas de anticipación para asados completos. Para empanadas y sándwiches de milanesa, podemos aceptar pedidos con 48 horas de anticipación según disponibilidad.",
+    a: "Recomendamos reservar con al menos 48 horas de anticipación para eventos grandes. Para pedidos más chicos (sanguches, hamburguesas, empanadas) podemos aceptar con 24 horas según disponibilidad.",
   },
   {
-    q: "¿El asado incluye parrillero?",
-    a: "Sí, nuestro servicio de asado a domicilio incluye parrillero profesional, carbón, parrilla portátil y todos los utensilios necesarios. Vos solo ponés el espacio y los invitados.",
+    q: "¿Incluyen parrillero para eventos?",
+    a: "Sí, para eventos grandes incluimos parrillero profesional, carbón, parrilla portátil y todos los utensilios. Vos solo ponés el espacio y los invitados.",
   },
   {
-    q: "¿Tienen opciones vegetarianas o veganas?",
-    a: "Por supuesto. Ofrecemos empanadas de humita y verdura, milanesas de berenjena y opciones de provoleta y ensaladas para complementar cualquier menú.",
+    q: "¿Tienen opciones además de carne?",
+    a: "Sí. Tenemos empanadas de verdura, hamburguesas con opciones personalizables y tequeños. Consultanos por opciones vegetarianas.",
   },
   {
-    q: "¿Cuál es el mínimo de personas para contratar?",
-    a: "Para asados completos el mínimo es de 15 personas. Para sándwiches de milanesa y empanadas, no hay mínimo — podés pedir desde una docena.",
+    q: "¿Cómo hago un pedido?",
+    a: "Podés contactarnos por WhatsApp al 11-2163-9741 o llamarnos al 11-3680-5439. Te armamos el presupuesto en el momento.",
   },
 ];
 
@@ -33,24 +33,25 @@ const FAQSection = () => {
     <section className="section-padding" id="faq">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16">
-          <span className="text-sm font-body uppercase tracking-widest text-primary font-semibold">
+          <span className="text-sm font-body uppercase tracking-[0.2em] text-primary font-semibold normal-case">
             FAQ
           </span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mt-3">
-            Preguntas frecuentes
+          <h2 className="font-display text-5xl md:text-6xl font-bold text-foreground mt-3">
+            Preguntas Frecuentes
           </h2>
+          <div className="w-16 h-1 bg-primary mx-auto mt-4 rounded-full" />
         </div>
         <Accordion type="single" collapsible className="space-y-3">
           {faqs.map((faq, i) => (
             <AccordionItem
               key={i}
               value={`faq-${i}`}
-              className="bg-card border border-border rounded-xl px-6 data-[state=open]:shadow-sm"
+              className="bg-card border-2 border-border rounded-xl px-6 data-[state=open]:border-primary/30 data-[state=open]:shadow-sm transition-all"
             >
-              <AccordionTrigger className="text-left font-display text-lg font-semibold text-card-foreground hover:no-underline py-5">
+              <AccordionTrigger className="text-left font-display text-lg font-semibold text-card-foreground hover:no-underline py-5 tracking-wide">
                 {faq.q}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+              <AccordionContent className="text-muted-foreground leading-relaxed pb-5 font-body normal-case">
                 {faq.a}
               </AccordionContent>
             </AccordionItem>
