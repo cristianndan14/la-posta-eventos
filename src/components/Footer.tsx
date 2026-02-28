@@ -1,11 +1,12 @@
-import { Flame, Instagram, Phone, Mail } from "lucide-react";
+import { Instagram, Phone, Mail } from "lucide-react";
+import logoImage from "@/assets/logo-laposta.jpg";
 
 const Footer = () => {
   return (
     <footer className="bg-foreground text-background/70 section-padding !py-12">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="flex items-center gap-2">
-          <Flame className="w-6 h-6 text-primary" />
+        <div className="flex items-center gap-3">
+          <img src={logoImage} alt="Logo de La Posta Catering" className="w-10 h-10 rounded-full bg-background/90" />
           <span className="font-display font-bold text-xl text-background">La Posta</span>
         </div>
         <p className="text-sm text-center">
