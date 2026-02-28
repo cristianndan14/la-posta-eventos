@@ -1,6 +1,7 @@
 import { Flame, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-asado.webp";
+import logoImage from "@/assets/logo-laposta.jpg";
 
 const HeroSection = () => {
   return (
@@ -13,12 +14,11 @@ const HeroSection = () => {
       />
       <div className="absolute inset-0 hero-overlay" />
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-        <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-foreground/10 backdrop-blur-sm px-4 py-2 mb-8">
-          <Flame className="w-4 h-4 text-primary" />
-          <span className="text-sm font-body text-primary-foreground tracking-wide uppercase">
-            Catering en CABA
-          </span>
-        </div>
+        <img
+          src={logoImage}
+          alt="Logo de La Posta Catering CABA"
+          className="w-20 h-20 md:w-28 md:h-28 rounded-full border-2 border-primary/40 shadow-lg mx-auto mb-8 bg-background/90"
+        />
         <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground leading-[1.05] mb-6">
           En el sabor, tenemos{" "}
           <span className="text-gradient-brand">La Posta</span>
