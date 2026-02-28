@@ -14,7 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Playfair Display', 'Georgia', 'serif'],
+        display: ['Bebas Neue', 'Impact', 'sans-serif'],
+        serif: ['Playfair Display', 'Georgia', 'serif'],
         body: ['Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
@@ -62,8 +63,8 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         brand: {
-          orange: "hsl(var(--orange-brand))",
-          glow: "hsl(var(--orange-glow))",
+          red: "hsl(var(--red-brand))",
+          glow: "hsl(var(--red-glow))",
           stone: "hsl(var(--stone-warm))",
           dark: "hsl(var(--stone-dark))",
         },
