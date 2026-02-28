@@ -37,7 +37,7 @@ const jsonLd = {
 const Index = () => {
   useEffect(() => {
     // Set page title and meta
-    document.title = "La Posta Catering | Asado a domicilio en CABA";
+    document.title = "La Posta | El Mejor Catering de Asado y Milanesas en CABA";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
       metaDesc.setAttribute("content", "Catering en CABA: asado a domicilio, sándwiches de milanesa para eventos y empanadas caseras. Pedí tu presupuesto hoy.");
