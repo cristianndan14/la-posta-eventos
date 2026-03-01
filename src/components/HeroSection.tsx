@@ -1,7 +1,7 @@
+import { Flame } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-asado.webp";
 import logoImage from "@/assets/logo-laposta.jpg";
-import FlameIcon from "@/components/FlameIcon";
 
 const HeroSection = () => {
   return (
@@ -17,24 +17,17 @@ const HeroSection = () => {
         <img
           src={logoImage}
           alt="Logo de La Posta Eventos – Catering para eventos familiares en CABA"
-          className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-white shadow-2xl mx-auto mb-8"
+          className="w-24 h-24 md:w-32 md:h-32 rounded-full border-2 border-primary/50 shadow-2xl mx-auto mb-8 bg-background/95"
         />
-
-        <div className="flex items-center justify-center gap-2 mb-4">
-          <FlameIcon className="w-12 h-12 md:w-16 md:h-16" />
-          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-white leading-none tracking-wide">
-            La Posta <span className="text-primary">Eventos</span>
-          </h1>
-          <FlameIcon className="w-12 h-12 md:w-16 md:h-16" />
-        </div>
-
-        <p className="font-hand text-2xl md:text-3xl text-white/90 max-w-2xl mx-auto mb-4">
+        <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-bold text-primary-foreground leading-none mb-4 tracking-wider">
+          La Posta <span className="text-gradient-brand">Eventos</span>
+        </h1>
+        <p className="font-serif text-xl md:text-2xl text-primary-foreground/80 italic max-w-2xl mx-auto mb-4 normal-case tracking-normal">
           Catering de asado y milanesas tucumanas para tus eventos familiares
         </p>
-        <p className="text-base md:text-lg text-white/60 font-body max-w-xl mx-auto mb-10">
+        <p className="text-base md:text-lg text-primary-foreground/60 font-body max-w-xl mx-auto mb-10 normal-case">
           Asado completo · Sanguches de milanesa tucumana · Empanadas tucumanas · Hamburguesas
         </p>
-
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
             size="lg"
@@ -42,7 +35,8 @@ const HeroSection = () => {
             asChild
           >
             <a href="https://wa.me/5491121639741?text=Hola!%20Quiero%20cotizar%20un%20evento" target="_blank" rel="noopener noreferrer">
-              🔥 Pedí tu presupuesto
+              <Flame className="w-5 h-5 mr-2" />
+              Pedí tu presupuesto
             </a>
           </Button>
           <Button

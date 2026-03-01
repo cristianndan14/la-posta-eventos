@@ -24,37 +24,39 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="section-padding bg-secondary" id="testimonios">
+    <section className="section-padding bg-muted" id="testimonios">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <span className="font-hand text-xl text-primary">Eventos reales</span>
-          <h2 className="font-display text-5xl md:text-6xl text-foreground mt-2">
+          <span className="text-sm font-body uppercase tracking-[0.2em] text-primary font-semibold normal-case">
+            Eventos reales
+          </span>
+          <h2 className="font-display text-5xl md:text-6xl font-bold text-foreground mt-3">
             Lo que dicen nuestros clientes
           </h2>
-          <div className="w-20 h-1 bg-primary mx-auto mt-4 rounded-full" />
+          <div className="w-16 h-1 bg-primary mx-auto mt-4 rounded-full" />
         </div>
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="bg-background hand-border p-8 hover:border-primary transition-colors"
+              className="bg-background rounded-2xl p-8 border-2 border-border hover:border-primary/20 transition-colors"
             >
-              <Quote className="w-8 h-8 text-primary/30 mb-4" />
-              <p className="text-foreground/80 leading-relaxed mb-6 font-body text-sm">
+              <Quote className="w-8 h-8 text-primary/20 mb-4" />
+              <p className="text-foreground/80 leading-relaxed mb-6 font-body normal-case">
                 "{t.text}"
               </p>
               <div className="flex items-center gap-1 mb-3">
                 {Array.from({ length: t.stars }).map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+                  <Star key={i} className="w-4 h-4 fill-primary text-primary" />
                 ))}
               </div>
-              <p className="font-display text-lg text-foreground">{t.name}</p>
-              <p className="text-sm text-muted-foreground font-hand">{t.event}</p>
+              <p className="font-display text-lg text-foreground tracking-wide">{t.name}</p>
+              <p className="text-sm text-muted-foreground font-body normal-case">{t.event}</p>
             </div>
           ))}
         </div>
         <div className="text-center">
-          <p className="text-muted-foreground font-hand text-lg mb-4">
+          <p className="text-muted-foreground font-body mb-4 normal-case">
             ¿Querés que tu evento sea el próximo éxito?
           </p>
           <Button

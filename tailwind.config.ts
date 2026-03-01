@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Permanent Marker', 'cursive'],
-        hand: ['Patrick Hand', 'cursive'],
+        display: ['Bebas Neue', 'Impact', 'sans-serif'],
+        serif: ['Playfair Display', 'Georgia', 'serif'],
         body: ['Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
@@ -65,9 +65,8 @@ export default {
         brand: {
           red: "hsl(var(--red-brand))",
           glow: "hsl(var(--red-glow))",
-          yellow: "hsl(var(--yellow-accent))",
-          "yellow-soft": "hsl(var(--yellow-soft))",
-          dark: "hsl(var(--dark))",
+          stone: "hsl(var(--stone-warm))",
+          dark: "hsl(var(--stone-dark))",
         },
       },
       borderRadius: {
