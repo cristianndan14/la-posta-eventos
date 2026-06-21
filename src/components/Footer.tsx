@@ -13,7 +13,7 @@ const Footer = ({ logoSrc }: FooterProps) => {
           <span className="font-display font-bold text-2xl text-background tracking-wider">La Posta Eventos</span>
         </div>
         <p className="text-sm text-center normal-case">
-          Sanguches · Hamburguesas · Choripán · Empanadas · Catering en CABA
+          Parrilla · Empanadas · Sushi &amp; Sushi Burger · Milanesas · Catering en CABA y zona sur
         </p>
         <div className="flex items-center gap-4">
           <a href="#" aria-label="Instagram" className="hover:text-primary transition-colors">
