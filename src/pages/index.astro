@@ -1,4 +1,5 @@
 ---
+import { getImage } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import HeroSection from '../components/HeroSection';
 import StatsSection from '../components/StatsSection';
@@ -6,16 +7,24 @@ import MenuSection from '../components/MenuSection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import FAQSection from '../components/FAQSection';
 import Footer from '../components/Footer';
+
+import heroAsado from '../assets/hero-asado.webp';
+import logoLaposta from '../assets/logo-laposta.jpg';
+
+// Optimize images at build time: resize + convert to webp
+const heroImg = await getImage({ src: heroAsado, format: 'webp', width: 1920 });
+const logoImg = await getImage({ src: logoLaposta, format: 'webp', width: 256 });
+const logoSmall = await getImage({ src: logoLaposta, format: 'webp', width: 80 });
 ---
 
 <Layout>
   <main>
-    <HeroSection />
+    <HeroSection heroSrc={heroImg.src} logoSrc={logoImg.src} />
     <StatsSection />
     <MenuSection />
     <TestimonialsSection />
     <FAQSection client:visible />
-    <Footer />
+    <Footer logoSrc={logoSmall.src} />
 
     <a
       href="https://wa.me/5491121639741"

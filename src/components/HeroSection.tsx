@@ -1,13 +1,16 @@
 import { Flame } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-asado.webp";
-import logoImage from "@/assets/logo-laposta.jpg";
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  heroSrc: string;
+  logoSrc: string;
+}
+
+const HeroSection = ({ heroSrc, logoSrc }: HeroSectionProps) => {
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
       <img
-        src={heroImage.src}
+        src={heroSrc}
         alt="Asado y catering para eventos familiares de La Posta Eventos en CABA"
         className="absolute inset-0 w-full h-full object-cover"
         loading="eager"
@@ -15,8 +18,10 @@ const HeroSection = () => {
       <div className="absolute inset-0 hero-overlay" />
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
         <img
-          src={logoImage.src}
+          src={logoSrc}
           alt="Logo de La Posta Eventos – Catering para eventos familiares en CABA"
+          width={128}
+          height={128}
           className="w-24 h-24 md:w-32 md:h-32 rounded-full border-2 border-primary/50 shadow-2xl mx-auto mb-8 bg-background/95"
         />
         <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-bold text-primary-foreground leading-none mb-4 tracking-wider">
