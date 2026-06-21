@@ -1,0 +1,69 @@
+---
+import '../index.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'La Posta Eventos | Catering de Milanesas y Parrilla en CABA',
+  description = 'Catering en CABA: asado a domicilio, sándwiches de milanesa para eventos y empanadas caseras. Pedí tu presupuesto hoy.',
+} = Astro.props;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FoodEstablishment',
+  name: 'La Posta Eventos',
+  description:
+    'Catering en CABA: sanguches de milanesa, hamburguesas, choripán, bondiola y empanadas tucumanas para eventos en Buenos Aires.',
+  url: 'https://lapostacatering.com.ar',
+  telephone: '+54-11-2163-9741',
+  email: 'hola@laposta.com.ar',
+  servesCuisine: 'Argentine',
+  priceRange: '$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Buenos Aires',
+    addressRegion: 'CABA',
+    addressCountry: 'AR',
+  },
+  areaServed: {
+    '@type': 'City',
+    name: 'Buenos Aires',
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '312',
+  },
+};
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="La Posta Eventos" />
+    <link rel="canonical" href="https://lapostacatering.com.ar" />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lapostacatering.com.ar/favicon.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@LaPostaCatering" />
+    <meta name="twitter:image" content="https://lapostacatering.com.ar/favicon.jpg" />
+
+    <link rel="icon" href="/favicon.jpg" type="image/jpeg" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
