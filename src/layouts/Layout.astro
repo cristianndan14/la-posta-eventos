@@ -1,5 +1,6 @@
 ---
 import '../index.css';
+import { faqs } from '../data/faqs';
 
 interface Props {
   title?: string;
@@ -7,36 +8,51 @@ interface Props {
 }
 
 const {
-  title = 'La Posta Eventos | Catering de Milanesas y Parrilla en CABA',
-  description = 'Catering en CABA: asado a domicilio, sándwiches de milanesa para eventos y empanadas caseras. Pedí tu presupuesto hoy.',
+  title = 'La Posta Eventos | Catering de Parrilla, Sushi y Milanesas en CABA',
+  description = 'Catering en CABA y zona sur: parrilla a domicilio, sushi y sushi burger, sanguches de milanesa y empanadas tucumanas para eventos. Pedí tu presupuesto hoy.',
 } = Astro.props;
+
+const areasServed = ['Buenos Aires', 'CABA', 'Monte Grande', '9 de Abril', 'Esteban Echeverría', 'Zona Sur GBA'];
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'FoodEstablishment',
-  name: 'La Posta Eventos',
-  description:
-    'Catering en CABA: sanguches de milanesa, hamburguesas, choripán, bondiola y empanadas tucumanas para eventos en Buenos Aires.',
-  url: 'https://lapostacatering.com.ar',
-  telephone: '+54-11-2163-9741',
-  email: 'hola@laposta.com.ar',
-  servesCuisine: 'Argentine',
-  priceRange: '$$',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Buenos Aires',
-    addressRegion: 'CABA',
-    addressCountry: 'AR',
-  },
-  areaServed: {
-    '@type': 'City',
-    name: 'Buenos Aires',
-  },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '312',
-  },
+  '@graph': [
+    {
+      '@type': 'FoodEstablishment',
+      name: 'La Posta Eventos',
+      description:
+        'Catering para eventos en CABA y zona sur del Gran Buenos Aires: parrilla, sushi y sushi burger, sanguches de milanesa tucumana y empanadas tucumanas.',
+      url: 'https://lapostacatering.com.ar',
+      telephone: '+54-11-2163-9741',
+      email: 'hola@laposta.com.ar',
+      servesCuisine: ['Argentine', 'Sushi', 'Japanese'],
+      priceRange: '$$',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Buenos Aires',
+        addressRegion: 'CABA',
+        addressCountry: 'AR',
+      },
+      areaServed: areasServed.map((name) => ({ '@type': 'Place', name })),
+      hasMenu: {
+        '@type': 'Menu',
+        hasMenuSection: [
+          { '@type': 'MenuSection', name: 'Parrilla', description: 'Asado completo con parrillero profesional.' },
+          { '@type': 'MenuSection', name: 'Empanadas Tucumanas', description: 'Hechas a mano, receta del norte argentino.' },
+          { '@type': 'MenuSection', name: 'Sushi & Sushi Burger', description: 'Rolls, combinados y sushi burger de autor.' },
+          { '@type': 'MenuSection', name: 'Sanguches de Milanesa Tucumana', description: 'Milanesas gigantes en pan casero.' },
+        ],
+      },
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.q,
+        acceptedAnswer: { '@type': 'Answer', text: faq.a },
+      })),
+    },
+  ],
 };
 ---
 

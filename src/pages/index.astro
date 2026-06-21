@@ -1,9 +1,12 @@
 ---
 import { getImage } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
 import StatsSection from '../components/StatsSection';
 import MenuSection from '../components/MenuSection';
+import ProcessSection from '../components/ProcessSection';
+import CoverageSection from '../components/CoverageSection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import FAQSection from '../components/FAQSection';
 import Footer from '../components/Footer';
@@ -18,10 +21,13 @@ const logoSmall = await getImage({ src: logoLaposta, format: 'webp', width: 80 }
 ---
 
 <Layout>
+  <Header client:load logoSrc={logoSmall.src} />
   <main>
     <HeroSection heroSrc={heroImg.src} logoSrc={logoImg.src} />
     <StatsSection />
     <MenuSection />
+    <ProcessSection />
+    <CoverageSection />
     <TestimonialsSection />
     <FAQSection client:visible />
     <Footer logoSrc={logoSmall.src} />

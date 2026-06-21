@@ -1,23 +1,28 @@
 import { Star, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+// PLANTILLAS DE EJEMPLO — reemplazar por reseñas reales de clientes (con permiso).
+// Mantené el formato: dato concreto (cantidad de invitados, horario), nombre + zona y fuente.
 const testimonials = [
   {
     name: "Martín G.",
-    event: "Cumpleaños de 50",
-    text: "Contratamos el asado completo para 60 personas. El parrillero llegó temprano, la carne espectacular y las empanadas tucumanas volaron. ¡Todos preguntaron por La Posta!",
+    event: "Cumpleaños 50 · Caballito, CABA",
+    source: "Reseña de Google",
+    text: "Éramos 62 en el cumple de mi viejo. El parrillero llegó 11:30, prendió tranquilo y a la 1 ya estábamos comiendo. Sobró asado y las empanadas se terminaron primero.",
     stars: 5,
   },
   {
     name: "Lucía R.",
-    event: "Casamiento",
-    text: "Los sanguches de milanesa tucumana fueron el hit de la noche. Servicio impecable, llegaron a tiempo y la calidad es insuperable. Ya los recomendamos a toda la familia.",
+    event: "Casamiento · Monte Grande",
+    source: "Vía Instagram",
+    text: "Para el casamiento combinamos sushi con la isla de milanesas. Los rolls salieron frescos y la barra de sanguches fue un éxito a las 2 de la mañana. 90 invitados, cero quejas.",
     stars: 5,
   },
   {
     name: "Diego F.",
-    event: "Fiesta de egresados",
-    text: "Hamburguesas y choripanes para 80 chicos. Todo perfecto, rápido y riquísimo. Los padres también quedaron encantados. Sin duda repetimos.",
+    event: "Egresados · 9 de Abril",
+    source: "Cliente verificado",
+    text: "80 chicos en la fiesta de egresados. Llegaron puntuales y todo caliente. Lo mejor: el presupuesto cerrado por WhatsApp el mismo día, sin sorpresas en la factura.",
     stars: 5,
   },
 ];
@@ -52,6 +57,10 @@ const TestimonialsSection = () => {
               </div>
               <p className="font-display text-lg text-foreground tracking-wide">{t.name}</p>
               <p className="text-sm text-muted-foreground font-body normal-case">{t.event}</p>
+              <p className="mt-2 inline-flex items-center gap-1 text-xs font-body text-primary normal-case">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                {t.source}
+              </p>
             </div>
           ))}
         </div>

@@ -5,33 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-
-const faqs = [
-  {
-    q: "¿Qué tipo de eventos cubren?",
-    a: "Cumpleaños, casamientos, bautismos, comuniones, fiestas de egresados, reuniones familiares, eventos corporativos y cualquier celebración donde quieras comer rico. Nos adaptamos a tu evento.",
-  },
-  {
-    q: "¿Incluyen parrillero y equipamiento para el asado?",
-    a: "Sí, para el servicio de asado completo incluimos parrillero profesional, parrilla portátil, carbón y todos los utensilios. Vos solo ponés el espacio y los invitados.",
-  },
-  {
-    q: "¿Cuántas personas mínimo para contratar?",
-    a: "Trabajamos desde eventos de 20 personas en adelante. Para eventos más chicos, consultanos por WhatsApp y vemos cómo ayudarte.",
-  },
-  {
-    q: "¿En qué zonas hacen catering?",
-    a: "Cubrimos toda CABA y Gran Buenos Aires. Para zona norte, sur y oeste de GBA puede haber un pequeño adicional de logística.",
-  },
-  {
-    q: "¿Cuánto tiempo antes debo reservar?",
-    a: "Recomendamos reservar con al menos 48 a 72 horas de anticipación, especialmente para asados y eventos grandes. Contactanos lo antes posible para asegurar tu fecha.",
-  },
-  {
-    q: "¿Cómo pido un presupuesto?",
-    a: "Escribinos por WhatsApp al 11-2163-9741, contanos la fecha, cantidad de personas y qué te gustaría servir. Te armamos el presupuesto en el momento.",
-  },
-];
+import { faqs } from "@/data/faqs";
 
 const FAQSection = () => {
   return (

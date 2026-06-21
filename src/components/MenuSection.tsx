@@ -1,4 +1,4 @@
-import { Flame as FireIcon, Beef, Sandwich, Cookie } from "lucide-react";
+import { Flame as FireIcon, Fish, Sandwich, Cookie } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface MenuCategory {
@@ -12,16 +12,9 @@ interface MenuCategory {
 const categories: MenuCategory[] = [
   {
     icon: FireIcon,
-    title: "Asado Completo",
-    description: "Parrilla tradicional argentina con parrillero profesional para tu evento familiar.",
+    title: "Parrilla",
+    description: "Asado tradicional argentino con parrillero profesional para tu evento.",
     items: ["Vacío", "Entraña", "Chorizo", "Morcilla", "Tira de asado", "Pollo", "Ensaladas y guarniciones"],
-    featured: true,
-  },
-  {
-    icon: Sandwich,
-    title: "Sanguches de Milanesa Tucumana",
-    description: "Nuestro clásico estrella. Milanesas gigantes estilo tucumano en pan casero.",
-    items: ["Milanesa completa", "Con lechuga y tomate", "Con jamón y queso", "En pan casero artesanal"],
     featured: true,
   },
   {
@@ -32,15 +25,22 @@ const categories: MenuCategory[] = [
     featured: true,
   },
   {
-    icon: Beef,
-    title: "Hamburguesas",
-    description: "Medallones caseros a la parrilla con todas las opciones.",
-    items: ["Simple", "Doble", "Triple", "Con cheddar y bacon", "Todas con papas fritas"],
+    icon: Fish,
+    title: "Sushi & Sushi Burger",
+    description: "Lo nuevo de La Posta: rolls frescos, combinados y nuestra sushi burger de autor.",
+    items: ["Rolls clásicos", "Niguiri", "Combinados", "Sushi Burger", "Opciones veggie"],
+    featured: true,
+  },
+  {
+    icon: Sandwich,
+    title: "Sanguches de Milanesa Tucumana",
+    description: "Nuestro clásico estrella. Milanesas gigantes estilo tucumano en pan casero.",
+    items: ["Milanesa completa", "Con lechuga y tomate", "Con jamón y queso", "En pan casero artesanal"],
     featured: true,
   },
 ];
 
-const extras = ["Bondiola", "Vacío en pan", "Choripán", "Tequeños", "Panchuques", "Bebidas frías", "Hielo"];
+const extras = ["Hamburguesas", "Bondiola", "Vacío en pan", "Choripán", "Tequeños", "Panchuques", "Bebidas frías", "Hielo"];
 
 const MenuSection = () => {
   return (
