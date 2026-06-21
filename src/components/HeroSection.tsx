@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
       <img
-        src={heroImage}
+        src={heroImage.src}
         alt="Asado y catering para eventos familiares de La Posta Eventos en CABA"
         className="absolute inset-0 w-full h-full object-cover"
         loading="eager"
@@ -15,7 +15,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 hero-overlay" />
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
         <img
-          src={logoImage}
+          src={logoImage.src}
           alt="Logo de La Posta Eventos – Catering para eventos familiares en CABA"
           className="w-24 h-24 md:w-32 md:h-32 rounded-full border-2 border-primary/50 shadow-2xl mx-auto mb-8 bg-background/95"
         />

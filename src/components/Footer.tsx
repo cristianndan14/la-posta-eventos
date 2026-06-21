@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="bg-foreground text-background/70 section-padding !py-12">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-3">
-          <img src={logoImage} alt="Logo de La Posta Eventos – Catering CABA" className="w-10 h-10 rounded-full bg-background/95" />
+          <img src={logoImage.src} alt="Logo de La Posta Eventos – Catering CABA" className="w-10 h-10 rounded-full bg-background/95" />
           <span className="font-display font-bold text-2xl text-background tracking-wider">La Posta Eventos</span>
         </div>
         <p className="text-sm text-center normal-case">
