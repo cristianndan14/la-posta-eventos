@@ -49,7 +49,7 @@ const CoverageSection = () => {
           asChild
         >
           <a
-            href="https://wa.me/5491121639741?text=Hola!%20Quiero%20saber%20si%20llegan%20a%20mi%20zona"
+            href="https://wa.me/541136805439?text=Hola!%20Quiero%20saber%20si%20llegan%20a%20mi%20zona"
             target="_blank"
             rel="noopener noreferrer"
           >
