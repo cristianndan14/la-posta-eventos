@@ -46,7 +46,7 @@ const Header = ({ logoSrc }: HeaderProps) => {
             </a>
           ))}
           <a
-            href="https://wa.me/5491121639741?text=Hola!%20Quiero%20pedir%20un%20presupuesto"
+            href="https://wa.me/541136805439?text=Hola!%20Quiero%20pedir%20un%20presupuesto"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-primary text-primary-foreground hover:bg-brand-glow text-sm font-semibold px-5 py-2.5 rounded-full uppercase tracking-wide transition-colors"
@@ -80,7 +80,7 @@ const Header = ({ logoSrc }: HeaderProps) => {
               </a>
             ))}
             <a
-              href="https://wa.me/5491121639741?text=Hola!%20Quiero%20pedir%20un%20presupuesto"
+              href="https://wa.me/541136805439?text=Hola!%20Quiero%20pedir%20un%20presupuesto"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
