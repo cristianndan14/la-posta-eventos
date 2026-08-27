@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { generateWhatsAppLink, getCompanyInfo } from "@/utils/contact";
 
 interface HeaderProps {
   logoSrc: string;
@@ -15,6 +16,8 @@ const links = [
 
 const Header = ({ logoSrc }: HeaderProps) => {
   const [open, setOpen] = useState(false);
+  const { name } = getCompanyInfo();
+  const budgetWhatsAppLink = generateWhatsAppLink("¡Hola! Quiero pedir un presupuesto");
 
   return (
     <header className="sticky top-0 z-40 bg-foreground/95 backdrop-blur border-b border-background/10">
@@ -22,16 +25,16 @@ const Header = ({ logoSrc }: HeaderProps) => {
         aria-label="Navegación principal"
         className="max-w-6xl mx-auto flex items-center justify-between px-4 md:px-8 h-16"
       >
-        <a href="#inicio" className="flex items-center gap-2" aria-label="La Posta Eventos - Inicio">
+        <a href="#inicio" className="flex items-center gap-2" aria-label={`${name} - Inicio`}>
           <img
             src={logoSrc}
-            alt="Logo de La Posta Eventos"
+            alt={`Logo de ${name}`}
             width={36}
             height={36}
             className="w-9 h-9 rounded-full border border-primary/50 bg-background/95"
           />
           <span className="font-display font-bold text-xl text-background tracking-wider">
-            La Posta Eventos
+            {name}
           </span>
         </a>
 
@@ -46,7 +49,7 @@ const Header = ({ logoSrc }: HeaderProps) => {
             </a>
           ))}
           <a
-            href="https://wa.me/541136805439?text=Hola!%20Quiero%20pedir%20un%20presupuesto"
+            href={budgetWhatsAppLink}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-primary text-primary-foreground hover:bg-brand-glow text-sm font-semibold px-5 py-2.5 rounded-full uppercase tracking-wide transition-colors"
@@ -80,7 +83,7 @@ const Header = ({ logoSrc }: HeaderProps) => {
               </a>
             ))}
             <a
-              href="https://wa.me/541136805439?text=Hola!%20Quiero%20pedir%20un%20presupuesto"
+              href={budgetWhatsAppLink}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
