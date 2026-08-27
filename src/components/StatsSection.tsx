@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { generateWhatsAppLink } from "@/utils/contact";
 
 const StatsSection = () => {
+  const eventWhatsAppLink = generateWhatsAppLink("¡Hola! Quiero cotizar mi evento");
+
   return (
     <section className="section-padding bg-foreground !py-16">
       <div className="max-w-3xl mx-auto text-center">
@@ -15,7 +18,7 @@ const StatsSection = () => {
           className="bg-primary text-primary-foreground hover:bg-brand-glow text-base font-semibold px-8 py-6 rounded-full uppercase tracking-wide"
           asChild
         >
-          <a href="https://wa.me/5491121639741?text=Hola!%20Quiero%20cotizar%20mi%20evento" target="_blank" rel="noopener noreferrer">
+          <a href={eventWhatsAppLink} target="_blank" rel="noopener noreferrer">
             Cotizá tu evento
           </a>
         </Button>
