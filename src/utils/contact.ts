@@ -3,7 +3,7 @@
  * Centraliza el acceso a las constantes de contacto
  */
 
-import { CONTACT, COVERAGE_ZONES, EVENT_TYPES, SERVICES, COMPANY } from "./contact";
+import { CONTACT, COVERAGE_ZONES, EVENT_TYPES, SERVICES, COMPANY } from "@/constants/contact";
 
 /**
  * Hook/Función que retorna los datos de contacto principales
