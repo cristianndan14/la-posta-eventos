@@ -1,6 +1,7 @@
 ---
 import '../index.css';
 import { faqs } from '../data/faqs';
+import { CONTACT } from '../constants/contact';
 
 interface Props {
   title?: string;
@@ -23,7 +24,7 @@ const jsonLd = {
       description:
         'Catering para eventos en CABA y zona sur del Gran Buenos Aires: parrilla, sushi y sushi burger, sanguches de milanesa tucumana y empanadas tucumanas.',
       url: 'https://lapostacatering.com.ar',
-      telephone: '+54-11-3680-5439',
+      telephone: CONTACT.PHONE,
       email: 'hola@laposta.com.ar',
       servesCuisine: ['Argentine', 'Sushi', 'Japanese'],
       priceRange: '$$',

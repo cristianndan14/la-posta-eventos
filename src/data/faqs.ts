@@ -1,3 +1,5 @@
+import { CONTACT } from "@/constants/contact";
+
 export interface FAQ {
   q: string;
   a: string;
@@ -31,6 +33,6 @@ export const faqs: FAQ[] = [
   },
   {
     q: "¿Cómo pido un presupuesto?",
-    a: "Escribinos por WhatsApp al +54-11-3680-5439, contanos la fecha, cantidad de personas y qué te gustaría servir. Te armamos el presupuesto en el momento.",
+    a: `Escribinos por WhatsApp al ${CONTACT.PHONE_DISPLAY}, contanos la fecha, cantidad de personas y qué te gustaría servir. Te armamos el presupuesto en el momento.`,
   },
 ];
