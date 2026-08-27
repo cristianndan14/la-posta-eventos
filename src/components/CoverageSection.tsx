@@ -1,18 +1,11 @@
+import { generateWhatsAppLink, getCoverageZonesList } from "@/utils/contact";
 import { MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export const zones = [
-  "CABA",
-  "Zona Sur GBA",
-  "Monte Grande",
-  "9 de Abril",
-  "Esteban Echeverría",
-  "Luis Guillón",
-  "Canning",
-  "Ezeiza",
-];
-
 const CoverageSection = () => {
+  const zones = getCoverageZonesList();
+  const consultWhatsAppLink = generateWhatsAppLink("¡Hola! Me gustaría saber si llegan a mi zona");
+
   return (
     <section className="section-padding" id="zonas">
       <div className="max-w-4xl mx-auto text-center">
@@ -49,7 +42,7 @@ const CoverageSection = () => {
           asChild
         >
           <a
-            href="https://wa.me/541136805439?text=Hola!%20Quiero%20saber%20si%20llegan%20a%20mi%20zona"
+            href={consultWhatsAppLink}
             target="_blank"
             rel="noopener noreferrer"
           >
