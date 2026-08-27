@@ -12,13 +12,13 @@
 
 export const CONTACT = {
   // Teléfono principal
-  PHONE: "+54 11 XXXX-XXXX",
-  PHONE_DISPLAY: "011 XXXX-XXXX",
+  PHONE: "+54 9 11 3680-5439",
+  PHONE_DISPLAY: "011 3680-5439",
 
   // WhatsApp
-  WHATSAPP: "+54 11 XXXX-XXXX",
+  WHATSAPP: "+54 9 11 3680-5439",
   WHATSAPP_MESSAGE: "¡Hola! Me gustaría consultar sobre los servicios de La Posta Eventos.",
-  WHATSAPP_LINK: "https://wa.me/54XXXXXXXXX",
+  WHATSAPP_LINK: "https://wa.me/5491136805439",
 
   // Correo electrónico
   EMAIL: "contacto@lapostaeventos.com",
